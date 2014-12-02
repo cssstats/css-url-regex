@@ -14,4 +14,10 @@ describe('css-url-regex', function() {
   it('should not find a css url if it is not there', function() {
     assert.equal(cssUrl().test("('foo.css')"), false);
   });
+
+  it('should match multiple urls', function() {
+    assert.deepEqual(
+      "url(foo.css); url(bar.css);".match(cssUrl()),
+      ["url(foo.css)", "url(bar.css)"]);
+  });
 });
