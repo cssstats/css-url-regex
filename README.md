@@ -1,6 +1,6 @@
 # CSS Url Regex
 
-[![Build Status](https://travis-ci.org/johnotander/css-url-regex.svg?branch=master)](https://travis-ci.org/johnotander/css-url-regex)
+[![Build Status](https://travis-ci.org/cssstats/css-url-regex.svg?branch=master)](https://travis-ci.org/cssstats/css-url-regex)
 
 A regular expression for matching CSS urls (`url(foo.css)`).
 
