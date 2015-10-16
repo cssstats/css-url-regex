@@ -1,6 +1,6 @@
 {
   "name": "css-url-regex",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Regular expression for matching CSS urls.",
   "main": "index.js",
   "files": [
