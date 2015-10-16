@@ -1,10 +1,6 @@
-# CSS Url Regex
-
-[![Build Status](https://travis-ci.org/cssstats/css-url-regex.svg?branch=master)](https://travis-ci.org/cssstats/css-url-regex)
+# css-url-regex [![Build Status](https://travis-ci.org/cssstats/css-url-regex.svg?branch=master)](https://travis-ci.org/johnotander/css-url-regex) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 A regular expression for matching CSS urls (`url(foo.css)`).
-
-In the near future this will be likely moved to <https://github.com/regexps>.
 
 ## Installation
 
@@ -15,7 +11,7 @@ npm i --save css-url-regex
 ## Usage
 
 ```javascript
-var cssUrl = require('css-url-regex');
+var cssUrl = require('css-url-regex')
 
 cssUrl().test('url(bar.css)') // => true
 cssUrl().test('kljhsdf') // => false

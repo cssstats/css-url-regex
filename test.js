@@ -1,6 +1,35 @@
-var assert = require('assert');
-var cssUrl = require('..');
+import test from 'ava'
+import cssUrlRegex from './'
 
+const matches = [
+  'url(foo.css)',
+  "url('foo.css')",
+  'url(foo/bar.css)',
+  'url(http://google.com/foo/bar)'
+]
+
+const nonMatches = [
+  'foo',
+  '(foo.css)',
+  'url (foo.css)'
+]
+
+test('matches urls', t => {
+  t.plan(matches.length)
+
+  matches.forEach((match) => {
+    t.ok(cssUrlRegex().test(match))
+  })
+})
+
+test('does not match non existent urls', t => {
+  t.plan(nonMatches.length)
+
+  nonMatches.forEach((nonMatch) => {
+    t.notOk(cssUrlRegex().test(nonMatch))
+  })
+})
+/*
 describe('css-url-regex', function() {
 
   it('should find a css url with no quotes', function() {
@@ -21,3 +50,4 @@ describe('css-url-regex', function() {
       ["url(foo.css)", "url(bar.css)"]);
   });
 });
+*/
